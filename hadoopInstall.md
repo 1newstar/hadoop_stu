@@ -2,13 +2,15 @@
 
 ## 环境介绍
 
-OS:rhel7.2
+OS : rhel7.2
 
-mastera	172.25.0.11 nameserver(8020 50070) 	resourcemanager（8032 8030 8088 8031 8033 ）jobhistory(10020 19888)	
+| hostname | ipadd       | daemon1                | daemon2                                  | daemon3                 |
+| -------- | ----------- | ---------------------- | ---------------------------------------- | ----------------------- |
+| mastera  | 172.25.0.11 | nameserver(8020 50070) | resourcemanager（8032 8030 8088 8031 8033 ） | jobhistory(10020 19888) |
+| slavea   | 172.25.0.13 | datanode               | nodemanager                              |                         |
+| slaveb   | 172.25.0.14 | datanode               | nodemanager                              |                         |
 
-slavea	172.25.0.13 datanode   		nodemanager
-
-slaveb 	172.25.0.14 datanode		nodemanager
+ 			
 
 ## 初始化环境脚本
 
@@ -142,10 +144,10 @@ B1
 
 ## Hadoop配置文件
 
-* core-site.xml模板 	share/doc/hadoop-project-dist/hadoop-common/core-default.xml
-* hdfs-site.xml模板	share/doc/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml
-* yarn-site.xml模板 	share/doc/hadoop-yarn/hadoop-yarn-common/yarn-default.xml
-* mapred-site.xml模板	share/doc/hadoop-mapreduce-client/hadoop-mapreduce-client-core/mapred-default.xml
+* core-site.xml模板 share/doc/hadoop-project-dist/hadoop-common/core-default.xml
+* hdfs-site.xml模板share/doc/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml
+* yarn-site.xml模板 share/doc/hadoop-yarn/hadoop-yarn-common/yarn-default.xml
+* mapred-site.xml模板share/doc/hadoop-mapreduce-client/hadoop-mapreduce-client-core/mapred-default.xml
 
 
 
@@ -211,6 +213,7 @@ B1
 B2
 C1
 }
+```
 
 ## wordcount 测试
 
